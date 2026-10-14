@@ -1,17 +1,18 @@
 body {
-    background-color: #e8f1fa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #d9d9d9;
 }
 
 .login-container {
     display: flex;
     width: 80%;
-    max-width: 900px;
+    max-width: 860px;
     height: 500px;
-    min-height: 420px;
+    min-height: 400px;
     background-color: #ffffff;
-    border-radius: 12px;
-    box-shadow: 0 8px 24px rgba(2, 74, 118, 0.15);
-    overflow: hidden;
+    border: 1px solid #999999;
 }
 
 .login-image {
@@ -20,13 +21,12 @@ body {
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    background-color: #ffffff;
 }
 
 .login-image img {
     width: 70%;
     height: auto;
-    object-fit: cover;
+    object-fit: contain;
 }
 
 .separator {
@@ -39,23 +39,28 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-left: 0;
+    margin-left: 10px;
     padding: 40px;
-    color: #024A76;
+    color: #222222;
 }
 
 .login-form h2 {
-    margin-bottom: 24px;
+    margin-bottom: 20px;
     text-align: center;
     font-weight: normal;
 }
 
+.login-form label {
+    margin-bottom: 6px;
+    font-size: 14px;
+}
+
 .login-form input {
-    padding: 12px 14px;
-    margin-bottom: 16px;
-    border: 1px solid #b7c9db;
-    border-radius: 8px;
-    font-size: 16px;
+    padding: 10px;
+    margin-bottom: 14px;
+    border: 1px solid #888888;
+    border-radius: 4px;
+    font-size: 14px;
 }
 
 input:focus {
@@ -71,11 +76,10 @@ input:hover {
     padding: 15px;
     background-color: #3471B8;
     border: none;
-    border-radius: 8px;
+    border-radius: 4px;
     color: white;
     font-size: 16px;
     cursor: pointer;
-    transition: background 0.3s;
 }
 
 .login-form button:hover {
@@ -83,19 +87,31 @@ input:hover {
 }
 
 .register-text {
-    margin-top: 18px;
+    margin-top: 16px;
     text-align: center;
     font-size: 14px;
-    color: #4a5d73;
+    color: #444444;
 }
 
 .register-text a {
     color: #3471B8;
     text-decoration: none;
     font-weight: bold;
-    transition: color 0.3s;
 }
 
 .register-text a:hover {
     color: #024A76;
+}
+
+@media (max-width: 700px) {
+    .login-container {
+        flex-direction: column;
+        height: auto;
+        width: 90%;
+    }
+
+    .separator {
+        width: 100%;
+        height: 5px;
+    }
 }

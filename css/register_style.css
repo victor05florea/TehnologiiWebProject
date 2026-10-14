@@ -1,0 +1,190 @@
+.register-page {
+  min-height: 100vh;
+  padding: 40px 16px;
+  background: #3471b8;
+}
+
+.register-card {
+  width: min(100%, 680px);
+  margin: 0 auto;
+  padding: 32px;
+  background: #ffffff;
+  border: 1px solid #dfe7f5;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(29, 36, 51, 0.07);
+}
+
+.register-header {
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.register-header h1 {
+  margin: 0 0 6px;
+  color: #1d2433;
+  font-size: 1.7rem;
+}
+
+.register-header p {
+  margin: 0;
+  color: #5c6475;
+}
+
+.register-form {
+  display: grid;
+  gap: 18px;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.form-field {
+  display: grid;
+  gap: 6px;
+  min-width: 0;
+}
+
+.form-field label,
+.form-group legend {
+  color: #30394b;
+  font-size: 0.92rem;
+  font-weight: 600;
+}
+
+.form-field input,
+.form-field select,
+.form-field textarea {
+  width: 100%;
+  min-height: 42px;
+  padding: 9px 11px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  background: #ffffff;
+  color: #1d2433;
+  font: inherit;
+}
+
+.form-field input[type="file"] {
+  padding: 7px;
+}
+
+.form-field textarea {
+  min-height: 88px;
+  resize: vertical;
+}
+
+.form-field input:focus,
+.form-field select:focus,
+.form-field textarea:focus {
+  border-color: #3471b8;
+  outline: 3px solid rgba(52, 113, 184, 0.16);
+}
+
+.form-group {
+  min-width: 0;
+  margin: 0;
+  padding: 12px 14px;
+  border: 1px solid #dfe7f5;
+  border-radius: 6px;
+}
+
+.form-group legend {
+  padding: 0 5px;
+}
+
+.choice-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 20px;
+}
+
+.choice {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  color: #40495a;
+  font-size: 0.92rem;
+}
+
+.choice input {
+  accent-color: #3471b8;
+}
+
+.optional {
+  color: #6b7280;
+  font-size: 0.82rem;
+  font-weight: 400;
+}
+
+.form-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.form-actions button {
+  min-height: 42px;
+  padding: 9px 16px;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.submit-button {
+  background: #3471b8;
+  color: #ffffff;
+}
+
+.submit-button:hover {
+  background: #285d99;
+}
+
+.form-actions .reset-button {
+  border-color: #cbd5e1;
+  background: #ffffff;
+  color: #40495a;
+}
+
+.reset-button:hover {
+  background: #f3f6fb;
+}
+
+.form-actions button:focus-visible,
+.login-link a:focus-visible {
+  outline: 3px solid rgba(52, 113, 184, 0.35);
+  outline-offset: 2px;
+}
+
+.login-link {
+  margin: 22px 0 0;
+  color: #5c6475;
+  text-align: center;
+}
+
+.login-link a {
+  color: #285d99;
+  font-weight: 600;
+}
+
+.login-link a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 560px) {
+  .register-page {
+    padding: 20px 12px;
+  }
+
+  .register-card {
+    padding: 22px 18px;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+}

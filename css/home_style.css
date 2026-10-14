@@ -1,0 +1,155 @@
+:root {
+  --bg: #f3f6fb;
+  --panel: #ffffff;
+  --panel-alt: #edf3ff;
+  --primary: #1d4ed8;
+  --primary-dark: #163ea8;
+  --text: #1d2433;
+  --muted: #5c6475;
+  --border: #dfe7f5;
+  --shadow: 0 10px 30px rgba(29, 36, 51, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(180deg, #f8fbff 0%, var(--bg) 100%);
+  color: var(--text);
+}
+
+.container {
+  width: min(1100px, calc(100% - 32px));
+  margin: 0 auto;
+}
+
+header {
+  background: #ffffff;
+  border-bottom: 1px solid var(--border);
+  box-shadow: 0 2px 10px rgba(29, 36, 51, 0.03);
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  padding: 24px 0;
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(1.6rem, 2vw, 2.5rem);
+  font-weight: 700;
+  color: var(--text);
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 14px;
+}
+
+nav a {
+  padding: 10px 14px;
+  border-radius: 999px;
+  color: var(--muted);
+  font-size: 0.95rem;
+  transition: all 0.2s ease;
+}
+
+nav a:hover {
+  background: var(--panel-alt);
+  color: var(--primary-dark);
+}
+
+main {
+  padding: 56px 0 40px;
+}
+
+.columns {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.column {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 28px 22px;
+  box-shadow: var(--shadow);
+}
+
+.column h2 {
+  margin-top: 0;
+  margin-bottom: 12px;
+  font-size: 1.35rem;
+}
+
+.column p {
+  margin: 0 0 24px;
+  color: var(--muted);
+  min-height: 86px;
+}
+
+.btn {
+  display: inline-block;
+  background: var(--primary);
+  color: #fff;
+  border-radius: 10px;
+  padding: 12px 18px;
+  font-weight: 600;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+  background: var(--primary-dark);
+  transform: translateY(-1px);
+}
+
+footer {
+  background: #0f172a;
+  color: rgba(255, 255, 255, 0.86);
+  padding: 24px 0;
+}
+
+footer .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 8px;
+}
+
+footer p {
+  margin: 0;
+}
+
+footer a {
+  color: #dfe9ff;
+}
+
+@media (max-width: 800px) {
+  header .container {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+
+  nav {
+    justify-content: center;
+  }
+
+  .columns {
+    grid-template-columns: 1fr;
+  }
+
+  .column p {
+    min-height: auto;
+  }
+}
